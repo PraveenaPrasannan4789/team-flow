@@ -10,4 +10,14 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   protected readonly title = signal('team-flow');
   appName = 'TeamFlow';
+  isLoggedIn = true;
+  employeeCount = 5;
+
+  showMessage() {
+    console.log('Welcome to TeamFlow');
+  }
+
+  alertMessage() {
+    console.log('Successfully logged In');
+  }
 }
