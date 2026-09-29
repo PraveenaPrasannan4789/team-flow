@@ -12,6 +12,7 @@ export class App {
   appName = 'TeamFlow';
   isLoggedIn = true;
   employeeCount = 5;
+  userRole = 'admin';
 
   showMessage() {
     console.log('Welcome to TeamFlow');
