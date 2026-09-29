@@ -13,6 +13,7 @@ export class App {
   isLoggedIn = true;
   employeeCount = 5;
   userRole = 'admin';
+  isButtonDisabled = true;
 
   showMessage() {
     console.log('Welcome to TeamFlow');
