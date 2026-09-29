@@ -10,6 +10,10 @@
   <div>Welcome to team Flow</div>
 }
 
+@if(userRole=== 'admin'){
+  <div>ADMIN LOGGED IN</div>
+}
+
 <button (click)="showMessage()">
 Click here
 </button>
