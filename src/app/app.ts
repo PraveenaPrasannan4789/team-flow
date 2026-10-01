@@ -19,6 +19,10 @@ export class App {
     console.log('Welcome to TeamFlow');
   }
 
+  toggleButton() {
+    this.isButtonDisabled = !this.isButtonDisabled;
+  }
+
   alertMessage() {
     console.log('Successfully logged In');
   }
