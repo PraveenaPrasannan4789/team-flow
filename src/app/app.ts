@@ -14,6 +14,11 @@ export class App {
   employeeCount = 5;
   userRole = 'admin';
   isButtonDisabled = true;
+  employees = [
+    { id: 1, name: 'John', role: 'Developer' },
+    { id: 2, name: 'Sarah', role: 'Designer' },
+    { id: 3, name: 'David', role: 'Manager' },
+  ];
 
   showMessage() {
     console.log('Welcome to TeamFlow');
