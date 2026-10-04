@@ -36,3 +36,16 @@ Toggle button
 @for(person of employees; track person.id){
   <div>Name: {{person.name}}</div>
 }
+
+
+switch multiple conditions
+
+@switch(userRole){
+ @case('admin'){
+  <p>user role:Admin</p>
+ }
+ @case('employee'){
+  <p>user role:employee</p>
+ }
+
+}
