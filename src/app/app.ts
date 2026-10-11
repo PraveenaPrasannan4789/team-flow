@@ -21,7 +21,6 @@ export class App {
     { id: 3, name: 'David', role: 'Manager' },
   ];
   employeeName = '';
-
   showMessage() {
     console.log('Welcome to TeamFlow');
   }
