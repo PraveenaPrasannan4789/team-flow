@@ -23,6 +23,12 @@ export class App {
     { id: 3, name: 'David', role: 'Manager' },
   ];
   employeeName = '';
+  selectedEmployee = '';
+
+  onEmployeeSelected(name: string) {
+    this.selectedEmployee = name;
+    console.log('Selected employee:', name);
+  }
   showMessage() {
     console.log('Welcome to TeamFlow');
   }
