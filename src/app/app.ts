@@ -24,6 +24,13 @@ export class App {
   ];
   employeeName = '';
   selectedEmployee = '';
+  searchTerm = '';
+
+  get filteredEmployees() {
+    return this.employees.filter((employee) =>
+      employee.name.toLowerCase().includes(this.searchTerm.trim().toLowerCase()),
+    );
+  }
 
   onEmployeeSelected(name: string) {
     this.selectedEmployee = name;
