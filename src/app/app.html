@@ -61,3 +61,18 @@ switch multiple conditions
 
 <p>Selected Employee: {{ selectedEmployee }}</p>
 
+<h2>Search Employees</h2>
+
+<input
+  type="text"
+  [(ngModel)]="searchTerm"
+  placeholder="Search by name"
+/>
+
+@for (employee of filteredEmployees; track employee.id) {
+  <div>
+    <p>{{ employee.name }} - {{ employee.role }}</p>
+  </div>
+} @empty {
+  <p>No employees found.</p>
+}
