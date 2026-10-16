@@ -76,3 +76,15 @@ switch multiple conditions
 } @empty {
   <p>No employees found.</p>
 }
+
+<h2>Employee List</h2>
+
+@for (employee of employees; track employee.id) {
+  <p>
+    Original Name: {{ employee.name }}
+  </p>
+
+  <p>
+    Uppercase Name: {{ employee.name | uppercase }}
+  </p>
+}
