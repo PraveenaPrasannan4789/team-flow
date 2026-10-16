@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Employee } from './employee/employee';
+import { UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule, CommonModule, Employee],
+  imports: [RouterOutlet, FormsModule, CommonModule, Employee, UpperCasePipe],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
