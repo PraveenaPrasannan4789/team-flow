@@ -88,3 +88,13 @@ switch multiple conditions
     Uppercase Name: {{ employee.name | uppercase }}
   </p>
 }
+
+
+<h2>Employee List</h2>
+
+@for (employee of employees; track employee.id) {
+  <div [class.manager-highlight]="employee.role === 'Manager'">
+    <p>{{ employee.name }}</p>
+    <p>{{ employee.role }}</p>
+  </div>
+}
