@@ -93,7 +93,7 @@ switch multiple conditions
 <h2>Employee List</h2>
 
 @for (employee of employees; track employee.id) {
-  <div [class.manager-highlight]="employee.role === 'Manager'">
+  <div [class.manager-highlight]="employee.role === 'Manager' || employee.role === 'Designer' ">
     <p>{{ employee.name }}</p>
     <p>{{ employee.role }}</p>
   </div>
