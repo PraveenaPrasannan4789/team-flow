@@ -95,6 +95,8 @@ switch multiple conditions
 @for (employee of employees; track employee.id) {
   <div [class.manager-highlight]="employee.role === 'Manager' || employee.role === 'Designer' ">
     <p>{{ employee.name }}</p>
-    <p>{{ employee.role }}</p>
+    <p [style.color]="getRoleColor(employee.role)">
+      {{ employee.role }}
+    </p>
   </div>
 }
