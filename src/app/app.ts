@@ -33,6 +33,16 @@ export class App {
     );
   }
 
+  getRoleColor(role: string): string {
+    if (role === 'Manager') {
+      return 'green';
+    } else if (role === 'Designer') {
+      return 'purple';
+    } else {
+      return 'blue';
+    }
+  }
+
   onEmployeeSelected(name: string) {
     this.selectedEmployee = name;
     console.log('Selected employee:', name);
