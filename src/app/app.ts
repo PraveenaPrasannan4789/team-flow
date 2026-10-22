@@ -27,6 +27,8 @@ export class App {
   selectedEmployee = '';
   searchTerm = '';
 
+  showRoleColours = true;
+
   get filteredEmployees() {
     return this.employees.filter((employee) =>
       employee.name.toLowerCase().includes(this.searchTerm.trim().toLowerCase()),
@@ -47,6 +49,11 @@ export class App {
     this.selectedEmployee = name;
     console.log('Selected employee:', name);
   }
+
+  toggleRoleColours() {
+    this.showRoleColours = !this.showRoleColours;
+  }
+
   showMessage() {
     console.log('Welcome to TeamFlow');
   }
