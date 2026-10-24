@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Employee } from './employee/employee';
 import { UpperCasePipe } from '@angular/common';
+import { ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +29,7 @@ export class App {
   searchTerm = '';
 
   showRoleColours = true;
+  @ViewChild('searchInput') searchInput!: ElementRef<HTMLInputElement>;
 
   get filteredEmployees() {
     return this.employees.filter((employee) =>
@@ -64,5 +66,9 @@ export class App {
 
   alertMessage() {
     console.log('Successfully logged In');
+  }
+
+  focusSearch() {
+    this.searchInput.nativeElement.focus();
   }
 }
