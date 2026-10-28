@@ -70,6 +70,9 @@ switch multiple conditions
   (keydown.escape)="clearSearch()"
   placeholder="Search employees"
 />
+<button (click)="clearSearch()">
+  Clear Search
+</button>
 
 @for (employee of filteredEmployees; track employee.id) {
   <div>
