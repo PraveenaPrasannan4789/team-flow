@@ -71,4 +71,8 @@ export class App {
   focusSearch() {
     this.searchInput.nativeElement.focus();
   }
+  clearSearch() {
+    this.searchTerm = '';
+    this.searchInput.nativeElement.focus();
+  }
 }
