@@ -64,9 +64,11 @@ switch multiple conditions
 <h2>Search Employees</h2>
 
 <input
+  #searchInput
   type="text"
   [(ngModel)]="searchTerm"
-  placeholder="Search by name"
+  (keydown.escape)="clearSearch()"
+  placeholder="Search employees"
 />
 
 @for (employee of filteredEmployees; track employee.id) {
@@ -103,4 +105,16 @@ switch multiple conditions
 
 <button (click)="toggleRoleColours()">
   Toggle Role Colours
+</button>
+
+<h2>Employee Search</h2>
+
+<input
+  #searchInput
+  type="text"
+  placeholder="Search employees"
+/>
+
+<button (click)="focusSearch()">
+  Focus Search
 </button>
